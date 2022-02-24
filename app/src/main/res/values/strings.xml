@@ -2,4 +2,9 @@
     <string name="app_name">Ch 12</string>
     <string name="create_order_title">Create Order</string>
     <string name="share_action_title">Share Action</string>
+    <string name="toplevel_activity">This is Top Level Activity</string>
+    <string-array name="pizzas">
+        <item>Diavolo</item>
+        <item>Funghi</item>
+    </string-array>
 </resources>
