@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ch 12</string>
+    <string name="create_order_title">Create Order</string>
+    <string name="share_action_title">Share Action</string>
+</resources>
