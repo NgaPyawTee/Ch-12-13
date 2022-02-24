@@ -2,9 +2,24 @@
     <string name="app_name">Ch 12</string>
     <string name="create_order_title">Create Order</string>
     <string name="share_action_title">Share Action</string>
+
     <string name="toplevel_activity">This is Top Level Activity</string>
+
     <string-array name="pizzas">
         <item>Diavolo</item>
         <item>Funghi</item>
     </string-array>
+
+    <string-array name="pasta">
+        <item>Spaghetti Bolognese</item>
+        <item>Lasagne</item>
+    </string-array>
+
+    <string-array name="stores">
+        <item>Cambridge</item>
+        <item>Sebastopol</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
