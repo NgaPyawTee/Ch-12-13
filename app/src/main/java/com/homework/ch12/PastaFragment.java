@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 
 public class PastaFragment extends ListFragment {
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

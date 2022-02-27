@@ -13,7 +13,7 @@ public class PizzaFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
-          inflater.getContext(), android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.pizzas)
+                inflater.getContext(), android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.pizzas)
         );
         setListAdapter(arrayAdapter);
 
