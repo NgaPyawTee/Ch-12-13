@@ -14,15 +14,7 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
     private String[] captions;
     private int[] imageID;
 
-    public CaptionedImagesAdapter(String[] captions, int[] imageID) {
-        this.captions = captions;
-        this.imageID = imageID;
-    }
 
-    @Override
-    public int getItemCount() {
-        return captions.length;
-    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -54,7 +46,5 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
 
         TextView textView = cardView.findViewById(R.id.info_text);
         textView.setText(captions[position]);
-
     }
-
 }
