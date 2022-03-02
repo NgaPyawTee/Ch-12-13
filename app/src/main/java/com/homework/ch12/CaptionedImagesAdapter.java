@@ -6,6 +6,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,6 +14,15 @@ import android.widget.TextView;
 public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
     private String[] captions;
     private int[] imageID;
+    private Listener interface_listener;
+
+    interface Listener{
+        void onClick(int position);
+    }
+
+    public void setInterface_listener(Listener listener) {
+        this.interface_listener = listener;
+    }
 
     public CaptionedImagesAdapter(String[] captions, int[] imageID) {
         this.captions = captions;
@@ -29,7 +39,7 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int i) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
         CardView cardView = holder.cv;
 
         ImageView iv = cardView.findViewById(R.id.info_image);
@@ -39,6 +49,15 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
 
         TextView tv = cardView.findViewById(R.id.info_text);
         tv.setText(captions[i]);
+
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               if(interface_listener != null){
+                   interface_listener.onClick(i);
+               }
+            }
+        });
     }
 
     @Override

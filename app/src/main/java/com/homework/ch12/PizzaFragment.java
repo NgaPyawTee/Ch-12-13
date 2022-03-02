@@ -1,5 +1,6 @@
 package com.homework.ch12;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -31,6 +32,15 @@ public class PizzaFragment extends Fragment {
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),2);
         recyclerView.setLayoutManager(gridLayoutManager);
+
+        adapter.setInterface_listener(new CaptionedImagesAdapter.Listener() {
+            @Override
+            public void onClick(int position) {
+                Intent intent = new Intent(getContext(),PizzaDetailActivity.class);
+                intent.putExtra(PizzaDetailActivity.EXTRA_PIZZA_ID,position);
+                getContext().startActivity(intent);
+            }
+        });
 
         return recyclerView;
     }
