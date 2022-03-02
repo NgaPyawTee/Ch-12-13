@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class PizzaCaptionedImagesAdapter extends RecyclerView.Adapter<PizzaCaptionedImagesAdapter.ViewHolder> {
+public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
     private String[] captions;
     private int[] imageID;
 
-    public PizzaCaptionedImagesAdapter(String[] captions, int[] imageID) {
+    public CaptionedImagesAdapter(String[] captions, int[] imageID) {
         this.captions = captions;
         this.imageID = imageID;
     }

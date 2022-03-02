@@ -14,7 +14,7 @@ public class PizzaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.fragment_pizza_recycler,container,false);
+        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.fragment_recycler_view,container,false);
 
         String[] pizzaNames = new String[Pizza.pizzas.length];
         for(int i=0; i< pizzaNames.length; i++){
@@ -26,7 +26,7 @@ public class PizzaFragment extends Fragment {
             pizzaImages[j] = Pizza.pizzas[j].getImageID();
         }
 
-        PizzaCaptionedImagesAdapter adapter = new PizzaCaptionedImagesAdapter(pizzaNames,pizzaImages);
+        CaptionedImagesAdapter adapter = new CaptionedImagesAdapter(pizzaNames,pizzaImages);
         recyclerView.setAdapter(adapter);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),2);
