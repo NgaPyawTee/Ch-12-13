@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
+public class PizzaCaptionedImagesAdapter extends RecyclerView.Adapter<PizzaCaptionedImagesAdapter.ViewHolder> {
     private String[] captions;
     private int[] imageID;
 
-    public CaptionedImagesAdapter(String[] captions, int[] imageID) {
+    public PizzaCaptionedImagesAdapter(String[] captions, int[] imageID) {
         this.captions = captions;
         this.imageID = imageID;
     }
@@ -22,9 +22,9 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        CardView cv = (CardView) LayoutInflater.from(viewGroup.getContext()).inflate(
-                R.layout.card_captioned_image,viewGroup,false
-        );
+        CardView cv = (CardView) LayoutInflater.from(viewGroup.getContext()).
+                inflate(R.layout.card_captioned_image, viewGroup, false
+                );
         return new ViewHolder(cv);
     }
 
@@ -32,8 +32,8 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
     public void onBindViewHolder(@NonNull ViewHolder holder, int i) {
         CardView cardView = holder.cv;
 
-        ImageView iv= cardView.findViewById(R.id.info_image);
-        Drawable drawable = ContextCompat.getDrawable(cardView.getContext(),imageID[i]);
+        ImageView iv = cardView.findViewById(R.id.info_image);
+        Drawable drawable = ContextCompat.getDrawable(cardView.getContext(), imageID[i]);
         iv.setImageDrawable(drawable);
         iv.setContentDescription(captions[i]);
 
@@ -48,9 +48,10 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private CardView cv;
+
         public ViewHolder(CardView cardView) {
             super(cardView);
-            cv=cardView;
+            cv = cardView;
         }
     }
 }
